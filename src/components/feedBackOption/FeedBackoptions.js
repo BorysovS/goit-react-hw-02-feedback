@@ -1,4 +1,6 @@
 import { FeedbackWrap, FeedbackBtn } from './FeedBackOption.styled';
+import PropTypes from 'prop-types';
+
 export const FeedBackOptions = ({ options, onClick }) => {
   return (
     <FeedbackWrap>
@@ -16,4 +18,9 @@ export const FeedBackOptions = ({ options, onClick }) => {
       })}
     </FeedbackWrap>
   );
+};
+
+FeedBackOptions.propTypes = {
+  options: PropTypes.shape.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
